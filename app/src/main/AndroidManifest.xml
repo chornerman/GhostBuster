@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.chornerman.ghostbuster">
+
+    <application
+            android:allowBackup="true"
+            android:label="Ghost Buster"
+            tools:ignore="GoogleAppIndexingWarning">
+
+        <service
+                android:name=".GhostTile"
+                android:enabled="true"
+                android:exported="true"
+                android:label="Adjust screen"
+                android:icon="@drawable/ic_arrow_upward_black_24dp"
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+
+            <intent-filter>
+                <action
+                        android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
